@@ -2,6 +2,8 @@
 
 Thanks to this useful cheat sheet from [GitHub](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf).
 
+Please view the 'Raw' file.
+
 ## Editors
 
 Editors such as VS Code and Atom support Markdown out of the box. Just create a new file with a .md extension.
