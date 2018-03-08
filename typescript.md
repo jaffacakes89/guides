@@ -78,7 +78,9 @@ Create a new file in the src/ folder called main.ts
 ```typescript
 import SHA256 = require("crypto-js/sha256");
 
-let newHash = calculateHash(0, "9dfd5ade27d09cabf3b5162757bfab3c11ce8f0b840cf9f2f526bed84263027c", "05/03/2018 12:00:00", "{5}"); 
+let newHash = calculateHash(0, "9dfd5ade27d09cabf3b5162757bfab3c11ce8f0b840cf9f2f526bed84263027c", "05/03/2018 12:00:00",  
+            { sender: "jaffa", receiver: "cakes", amount: 4 }); 
+
 console.log("Hello. New Hash = " + newHash);
 
 function calculateHash(index:number, previousHash:string, timestamp:string, data:string) { 
@@ -228,11 +230,11 @@ gulp.task("default", ["copy-html"], function () {
     .pipe(gulp.dest("dist"));
 });
 ```
-Thats it! You can now test the page by running gulp and then opening dist/index.html in your browser.
+You can now test the page by running gulp and then opening dist/index.html in your browser.
 
 Uglify
 
-The point of Uglify is to minify our code. We also need to install vinyl-buffer and gulp-sourcemaps to keep sourcemaps working.
+The point of Uglify is to minify our code. We also need to install vinyl-buffer.
 ```
 npm install --save-dev gulp-uglify vinyl-buffer gulp-sourcemaps
 ```
